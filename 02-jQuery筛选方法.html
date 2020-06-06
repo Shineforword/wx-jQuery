@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!-- 
+    parent()       $('li').parent();  查找父级
+       
+    children()     $('ul').children('li');  相当于$('ul>li'),最近一级(亲儿子)
+
+    find(selector) $('ul').find('li')  相当于$('ul li')后代选择器
+
+    siblings(selector) $('.first').siblings('li') 查找兄弟节点不包括自身
+
+    nextAll([expr]) $('.first').nextAll() 查找当前元素之后的所有同辈元素
+
+    preAll([expr]) $('.last').nextAll() 查找当前元素之前的所有同辈元素
+
+    hasClass(class) $('div').hasClass('protected') 检查单签元素是否含有某个特定的类  如果有返回true
+
+    eq(index)  $('li').eq(2);相当于$('li:eq(2)') index从0开始
+
+  --></body>
+</html>

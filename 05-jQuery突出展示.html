@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery.min.js"></script>
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 300px;
+        height: 200px;
+        box-sizing: border-box;
+        margin: 100px auto;
+      }
+      div ul {
+        text-align: center;
+        line-height: 100px;
+      }
+      div ul li {
+        list-style: none;
+        float: left;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>我</li>
+        <li>是</li>
+        <li>最</li>
+        <li>亮</li>
+        <li>那</li>
+        <li>个</li>
+      </ul>
+    </div>
+    <script>
+      $(function () {
+        $('li').hover(
+          function () {
+            $(this).siblings().stop().fadeTo(400, 0.5);
+          },
+          function () {
+            $(this).siblings().stop().fadeTo(400, 1);
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

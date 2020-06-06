@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+      .current {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jQuery给我们封装了很多动画  显示隐藏 滑动 淡入淡出 自定义动画 -->
+    <!--  
+      显示隐藏:show() hide() toggle()
+      滑动:slideDowm() slideUp() slideToggle() 
+      淡入淡出:fadeIn() fadeOut() fadeToggle() fadeTo()
+      自定义动画:animate()
+    -->
+    <!-- 
+      注意手册
+      语法规范:
+      show([speed],[easing],[fn])
+      1.参数均可以省略
+      2.speed:三种预定速度的字符串slow normal fast 或者动画时长毫秒值
+      3.easing:指定切换效果
+      4.fn:回调函数,在动画完成是执行的函数,每个元素执行一次
+
+     -->
+    <button>显示</button>
+    <button>切换</button>
+    <button>隐藏</button>
+    <div>123</div>
+    <script>
+      $(function () {
+        $('button')
+          .eq(0)
+          .click(function () {
+            $('div').show(1000, function () {
+              alert('已显示');
+            });
+          });
+        $('button')
+          .eq(1)
+          .click(function () {
+            $('div').toggleClass('current');
+          });
+        $('button')
+          .eq(2)
+          .click(function () {
+            $('div').hide(1000, function () {
+              alert('已隐藏');
+            });
+          });
+      });
+    </script>
+  </body>
+</html>

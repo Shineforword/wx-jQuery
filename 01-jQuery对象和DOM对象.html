@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="jquery.min.js"></script>
+
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <video src="11.mp4"></video>
+    <script>
+      //1.DOM对象:原生js获取
+      var div1 = document.querySelector('div');
+      console.dir(div1);
+
+      //2.jQuery对象:用jQuery方式获取的jQuery对象  本质:通过$把DOM元素进行了封装
+      $('div');
+      console.dir($('div'));
+
+      //3.jQuery对象只能使用jQuery方法不能使用原生js的方法  DOM对象则使用原生的JavaScript属性和方法
+      div1.style.display = 'none';
+
+      //jQuery对象和DOM对象的转换
+
+      //  1.DOM对象转化为jQuery对象
+      var myvideo = document.querySelector('video');
+      $('myvideo');
+
+      // jQuery对象转化为DOM对象
+      $('video')[0];
+      $('video').get(0);
+      console.dir($('video')[0]);
+      console.dir($('video').get(0));
+    </script>
+  </body>
+</html>

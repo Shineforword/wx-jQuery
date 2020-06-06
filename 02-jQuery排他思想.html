@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="jquery.min.js"></script>
+  </head>
+  <body>
+    <button>我是button</button>
+    <button>我是button</button>
+    <button>我是button</button>
+    <button>我是button</button>
+    <button>我是button</button>
+    <script>
+      $(function () {
+        //1.隐式迭代  给所有按钮绑定点击事件
+        $('button').click(function () {
+          //当前元素变化背景颜色
+          $(this).css('background', 'pink');
+          //其他兄弟元素去掉背景色
+          $(this).siblings('button').css('background', '');
+        });
+      });
+    </script>
+  </body>
+</html>

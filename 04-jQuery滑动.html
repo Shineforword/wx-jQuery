@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <style>
+      div {
+        display: none;
+        width: 200px;
+        height: 500px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <button>下拉滑动</button>
+    <button>上拉滑动</button>
+    <button>切换滑动</button>
+    <div></div>
+    <script>
+      $(function () {
+        $('button')
+          .eq(0)
+          .click(function () {
+            // 下滑动slideDown
+            $('div').slideDown(500);
+          });
+        $('button')
+          .eq(1)
+          .click(function () {
+            //上滑动slideUp
+            $('div').slideUp(500);
+          });
+        $('button')
+          .eq(2)
+          .click(function () {
+            //切换滑动
+            $('div').slideToggle(500);
+          });
+      });
+    </script>
+  </body>
+</html>
